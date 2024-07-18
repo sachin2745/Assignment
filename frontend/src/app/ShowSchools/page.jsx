@@ -48,7 +48,7 @@ const ShowSchools = () => {
                 <div key={post._id} className="xl:w-1/4 md:w-1/2 w-full p-6 sm:p-4 ">
                   <div className="bg-white shadow-lg p-2 rounded-md capitalize">
                     <img
-                      className="h-56 rounded w-full object-cover  mb-4"
+                      className="h-56 rounded w-full object-cover  mb-4 hover:scale-105 transition transform duration-500 ease-in-out"
                       src={`${process.env.NEXT_PUBLIC_API_URL}/` + post.image}
                       alt="Blog"
                     />

@@ -22,12 +22,12 @@ const Navbar = () => {
                 </Link>
                 <div className=" flex font-DM_Sans md:order-2 space-x-3 md:space-x-3 rtl:space-x-reverse">
                     <Link href="/">
-                        <span className="text-white font-DM_Sans bg-black hover:bg-black/80 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                        <span className="text-white font-DM_Sans bg-black hover:bg-black/80 font-medium rounded-md  text-sm px-4 py-3 text-center">
                         Add School
                         </span>
                     </Link>
                     <Link href="/ShowSchools">
-                        <span className="text-white font-DM_Sans bg-black hover:bg-black/80 font-medium rounded-lg text-sm px-4 py-2 text-center">
+                        <span className="text-white font-DM_Sans bg-black hover:bg-black/80 font-medium rounded-md  text-sm px-4 py-3 text-center">
                         Show Schools
                         </span>
                     </Link>
