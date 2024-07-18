@@ -18,7 +18,8 @@ const ShowSchools = () => {
       })
       .then((data) => {
         console.log(data);
-        setPostArray(data);
+        const sortedPosts = data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+        setPostArray(sortedPosts);
       })
       .catch((err) => {
         console.log(err);
@@ -40,11 +41,11 @@ const ShowSchools = () => {
           <h1 className=' text-4xl tracking-widest'>School</h1>
           <h3 className=' font-normal tracking-wider text-1xl'>Add School &rsaquo; Show School</h3>
         </div>
-        <div className="flex flex-wrap -m-4 mt-10 ">
+        <div className="flex flex-wrap -m-4 mt-10 mb-10">
           {
             postArray.map((post, index) => {
               return (
-                <div className="xl:w-1/4 md:w-1/2 w-full p-6 sm:p-4 ">
+                <div key={post._id} className="xl:w-1/4 md:w-1/2 w-full p-6 sm:p-4 ">
                   <div className="bg-white shadow-lg p-2 rounded-md capitalize">
                     <img
                       className="h-56 rounded w-full object-cover  mb-4"

@@ -34,6 +34,7 @@ const AddSchool = () => {
     if (res.status === 200) {
       console.log("File uploaded");
       toast.success('File Uploaded!');
+            
     }
   };
 
@@ -206,7 +207,7 @@ const AddSchool = () => {
                   id="email_id"
                   name="email_id"
                   type="email"
-                  autoComplete="email"
+                  autoComplete="off"
                   placeholder='Enter  email address'
                   value={postForm.values.email_id}
                   onChange={postForm.handleChange}
@@ -221,7 +222,7 @@ const AddSchool = () => {
               <button
                 data-ripple-light="true"
                 type="submit"
-                className="block w-full select-none rounded-lg bg-gradient-to-tr from-black to-gray-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-lg hover:shadow-cyan-500/40 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                className="block w-full select-none rounded-lg bg-gradient-to-tr from-black to-gray-400 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-cyan-500/20 transition-all hover:shadow-sm hover:shadow-black/50 active:opacity-[0.40] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
               >
                 Upload
               </button>

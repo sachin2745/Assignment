@@ -6,9 +6,7 @@ import AddSchool from './AddSchool/page';
 const Page = () => {
   return (
     <>
-
       <AddSchool />
-
     </>
   );
 };
