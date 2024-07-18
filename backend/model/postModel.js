@@ -22,7 +22,7 @@ const mySchema = new Schema({
         required: true
     },
     email_id: {
-        type: Number,
+        type: String,
         required: true
     },
     image: {

@@ -5,18 +5,17 @@ require('dotenv').config();
 
 //fill the require data
 const postRouter = require('./router/postRouter');
-
+const utilRouter = require('./router/util');
 
 app.use(express.json());
-app.use(cors({origin: '*'}));
-
+app.use(cors({
+    origin: 'http://localhost:3000',
+}));
 
 //that is port to start express server
 
 app.use('/post', postRouter);
-
-
-
+app.use('/util', utilRouter);
 app.use(express.static('./static/uploads'));
   
 

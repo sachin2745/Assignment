@@ -13,6 +13,11 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      Luckiest_Guy: ["Luckiest Guy", "cursive"],
+      DM_Sans: ['DM Sans', 'sans-serif'],
+      Barlow_Semi_Condensed: ['Barlow Semi Condensed', 'sans-serif']
+    },
   },
   plugins: [],
 };
