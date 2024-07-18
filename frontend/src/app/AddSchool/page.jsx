@@ -4,7 +4,7 @@ import { useFormik } from 'formik';
 import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 
-const addSchool = () => {
+const AddSchool = () => {
 
   const productSchema = Yup.object().shape({
     name: Yup.string().required('Name is required').min(3, 'Name is too short'),
@@ -72,14 +72,14 @@ const addSchool = () => {
 
   return (
     <div className="max-w-screen-lg mx-auto">
-      <div className="flex pt-20 pb-10">
+      <div className="flex pt-12 pb-10 ">
         <div className="relative flex-1 flex-col bg-white rounded-lg bg-clip-border shadow-xl">
-          <div className="relative mx-4 -mt-6 mb-4 grid h-28 border-solid border-t-4 border-white place-items-center overflow-hidden rounded-xl bg-gradient-to-tr from-black to-gray-400 bg-clip-border text-white shadow-lg shadow-gray-500/40">
-            <h3 className="block font-sans text-3xl font-semibold leading-snug tracking-normal text-white antialiased">
+          <div className="relative grid  pb-5  place-items-center overflow-hidden  ">
+            <h3 className="block font-Luckiest_Guy text-4xl   leading-snug tracking-wide text-black antialiased">
               Add School
             </h3>
           </div>
-          <form className='flex flex-col gap-4 font-DM_Sans font-semibold max-w-4xl mx-auto p-2' onSubmit={postForm.handleSubmit}>
+          <form className='flex flex-col gap-4 font-DM_Sans font-semibold max-w-4xl mx-auto p-8 md:p-2' onSubmit={postForm.handleSubmit}>
             <div>
               <label htmlFor="name" className="block text-md font-medium leading-6 text-black">
                 Name
@@ -183,7 +183,7 @@ const addSchool = () => {
             <div className="relative h-11 w-full min-w-[200px] mb-7">
               <label
                 htmlFor="image"
-                className="font-Jost fw-bold block text-sm font-medium leading-6 text-gray-900"
+                className="block text-md font-medium leading-6 text-black"
               >
                 Choose School photo
               </label>
@@ -233,4 +233,4 @@ const addSchool = () => {
   );
 }
 
-export default addSchool;
+export default AddSchool;
