@@ -9,7 +9,7 @@ const utilRouter = require('./router/util');
 
 app.use(express.json());
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://assignment-five-snowy.vercel.app',
 }));
 
 //that is port to start express server
