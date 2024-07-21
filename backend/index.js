@@ -3,24 +3,22 @@ const cors = require('cors');
 const app = express();
 require('dotenv').config();
 
-// Import routers
 const postRouter = require('./router/postRouter');
 const utilRouter = require('./router/util');
 
-// Middleware
+// Add this code to allow requests from both origins
 app.use(express.json());
-app.use(cors({
-  origin: 'https://assignment-five-snowy.vercel.app',
-}));
+app.use(cors({origin: '*'}));
 
-// Serve static files (uploaded images)
-app.use('/static/uploads', express.static('./static/uploads'));
 
-// Routes
+app.use(express.json());
+
 app.use('/post', postRouter);
 app.use('/util', utilRouter);
+app.use(express.static('./static/uploads'));
 
-// Routes for testing
+const port =5000;
+
 app.get('/', (req, res) => {
   res.send('Got Response From The Express Server');
 });
@@ -29,14 +27,4 @@ app.get('/add', (req, res) => {
   res.send('Add Response From The Express Server');
 });
 
-// Error handling middleware (example)
-app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
-});
-
-const port = 5000; 
-
-app.listen(port, () => {
-  console.log(`Express server is running on port ${port}`);
-});
+app.listen(port, () => console.log('Express Server Started Now'));
