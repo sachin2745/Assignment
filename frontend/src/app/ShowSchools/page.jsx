@@ -38,8 +38,8 @@ const ShowSchools = () => {
       </div>
       <div className="flex flex-wrap  mt-10 mb-10">
         {loading ? (
-          <div className="w-full text-center">
-            <p>Loading...</p>
+          <div className="w-full mt-10 text-center text-3xl lg:text-5xl text-black font-Luckiest_Guy tracking-wider">
+            <p>Schools Loading...</p>
           </div>
         ) : (
           postArray.map((post, index) => (
