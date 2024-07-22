@@ -8,7 +8,7 @@ const utilRouter = require('./router/util');
 
 // Add this code to allow requests from both origins
 app.use(express.json());
-app.use(cors({origin: '*'}));
+app.use(cors({origin: 'https://assignment-five-snowy.vercel.app'}));
 
 
 app.use(express.json());
