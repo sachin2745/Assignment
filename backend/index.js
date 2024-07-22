@@ -15,6 +15,7 @@ app.use(express.json());
 
 app.use('/post', postRouter);
 app.use('/util', utilRouter);
+
 app.use(express.static('./static/uploads'));
 
 const port =5000;
